@@ -2,6 +2,7 @@ import express from "express";
 import * as studentController  from "../controllers/students.controller.js"
 
 const router = express.Router();
+router.get("/", (req, res)=>{res.send("students module running!")});
 router.post("/add", studentController.addStudent);
 router.post("/update", studentController.updateStudent);
 router.post("/getAll", studentController.getAllStudent);
